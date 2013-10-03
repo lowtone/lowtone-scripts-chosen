@@ -23,7 +23,7 @@ namespace lowtone\scripts\chosen {
 			Package::INIT_PACKAGES => array("lowtone\\scripts"),
 			Package::INIT_SUCCESS => function() {
 
-				wp_register_style("chosen", LIB_URL . "/lowtone-scripts-chosen/assets/styles/chosen.min.css");
+				wp_register_style("chosen", LIB_URL . "/lowtone-scripts-chosen/assets/styles/chosen.min.css", array(), "1.0.0");
 
 				$dependencies = array(
 						"chosen.jquery" => array("jquery"),
