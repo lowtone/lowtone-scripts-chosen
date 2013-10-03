@@ -232,6 +232,10 @@
   font-family: sans-serif;
   line-height: normal;
   border-radius: 0;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
 }
 .chosen-container-multi .chosen-choices li.search-field .default {
   color: #999;
