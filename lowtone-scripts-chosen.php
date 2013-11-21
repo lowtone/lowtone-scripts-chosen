@@ -25,6 +25,15 @@ namespace lowtone\scripts\chosen {
 
 				wp_register_style("chosen", LIB_URL . "/lowtone-scripts-chosen/assets/styles/chosen.min.css", array(), "1.0.0");
 
+				add_filter("script_loader_src", function($src, $handle) {
+					if ("chosen" != substr($handle, 0, 6))
+						return $src;
+
+					wp_enqueue_style("chosen");
+
+					return $src;
+				}, 10, 2);
+
 				$dependencies = array(
 						"chosen.jquery" => array("jquery"),
 						"chosen.proto" => array("prototype")
